@@ -7,9 +7,9 @@ Test Teardown       Close Browser
 
 
 *** Test Cases ***
-Verify Valid Credential Test
+Verify Invalid Credential Test
     Launch Browser
     Input Text    id=txtUsername    Anup
     Input Password    id=txtPassword    anup123
     Click Element    id=btnLogin
-    Element Text Should Be    xpath=//span[text()='Invalid credentials']    Invalid credentials
+    Element Text Should Be    xpath=//span[@id='spanMessage']    Invalid credentials
