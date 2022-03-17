@@ -11,7 +11,7 @@ Test Teardown   Close Browser
 Test Template   Verify Add Emergency Contact Template
 
 *** Test Cases ***
-TC1
+Verify Add Emergency Contact Test
 
 *** Keywords ***
 Verify Add Emergency Contact Template
