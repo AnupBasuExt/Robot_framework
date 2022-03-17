@@ -9,6 +9,7 @@ Test Setup  Launch Browser
 Test Teardown   Close Browser
 
 Test Template   Verify Add Membership Template
+
 *** Test Cases ***
 Verify Add Membership list
 
