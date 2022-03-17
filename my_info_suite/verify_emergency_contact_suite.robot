@@ -6,14 +6,14 @@ Resource    ../Resource/Base/CommonFunctionality.resource
 Test Setup  Launch Browser
 Test Teardown   Close Browser
 
-Test Template   Verify Add Emergency Contact Test
+Test Template   Verify Add Emergency Contact Template
 
 *** Test Cases ***
 TC1     Admin   admin123    John    Brother     787878
 TC2     Admin   admin123    Sandy   Sister      787005
 
 *** Keywords ***
-Verify Add Emergency Contact Test
+Verify Add Emergency Contact Template
     [Arguments]     ${username}     ${password}     ${name}     ${relationship}      ${home_telephone}
     Input Text    id=txtUsername    ${username}
     Input Password    id=txtPassword    ${password}
