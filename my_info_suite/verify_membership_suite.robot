@@ -11,7 +11,7 @@ Test Teardown   Close Browser
 Test Template   Verify Add Membership Template
 
 *** Test Cases ***
-Verify Add Membership list
+Verify Add Membership Test
 
 *** Keywords ***
 Verify Add Membership Template
