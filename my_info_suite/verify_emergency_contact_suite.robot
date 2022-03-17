@@ -14,7 +14,7 @@ TC2     Admin   admin123    Sandy   Sister      787005
 
 *** Keywords ***
 Verify Add Emergency Contact Test
-    [Arguments]     ${username}     ${password}     ${name}     ${relationshi}      ${home_telephone}
+    [Arguments]     ${username}     ${password}     ${name}     ${relationship}      ${home_telephone}
     Input Text    id=txtUsername    ${username}
     Input Password    id=txtPassword    ${password}
     Click Element    id=btnLogin
@@ -23,7 +23,7 @@ Verify Add Emergency Contact Test
     Click Element    link=Emergency Contacts
     Click Element    id=btnAddContact
     Input Text    id=emgcontacts_name    ${name}
-    Input Text    id=emgcontacts_relationship    ${relationshi}
+    Input Text    id=emgcontacts_relationship    ${relationship}
     Input Text    id=emgcontacts_homePhone    ${home_telephone}
     Click Element    id=btnSaveEContact
 
