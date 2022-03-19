@@ -3,6 +3,7 @@ Documentation   This suite handles test case related to Memberships
 
 Resource    ../Resource/Base/CommonFunctionality.resource
 Resource    ../Resource/Pages/LoginPage.resource
+Resource    ../Resource/Pages/MainPage.resource
 
 Library     DataDriver      file=../test_data/orange_data.xlsx      sheet_name=AddMembership
 
@@ -19,9 +20,9 @@ Verify Add Membership Template
     [Arguments]     ${username}     ${password}     ${membership}   ${subscription_paid_by}     ${subscription_amount}      ${currency}
     Enter username    ${username}   
     Enter Password    ${password}  
-    Click Element    id=btnLogin
+    Click Login
     Page Should Contain    My Info
-    Click Element    link=My Info
+    Click On MyInfo
     Click Element    link=Memberships
     Click Element    id=btnAddMembershipDetail
     Click Element    id=membership_membership

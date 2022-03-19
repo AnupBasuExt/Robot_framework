@@ -3,6 +3,7 @@ Documentation   This suite willl handles all the test cases related to valid cre
 
 Resource        ../Resource/Base/CommonFunctionality.resource
 Resource        ../Resource/Pages/LoginPage.resource
+Resource        ../Resource/Pages/MainPage.resource
 
 Test Setup          Launch Browser
 Test Teardown       Close Browser
@@ -12,6 +13,6 @@ Test Teardown       Close Browser
 Verify Valid Credential Test
     Enter username    Admin
     Enter Password    admin123
-    Click Element    id=btnLogin
-    Page Should Contain    My Info
+    Click Login
+    MainPage Should Contain    My Info    Welcome
     Capture Page Screenshot

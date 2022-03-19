@@ -22,5 +22,6 @@ Verify Invalid Credential Template
     [Arguments]     ${username}     ${password}     ${expected_error}
     Enter username    ${username}
     Enter Password    ${password}
-    Click Element    id=btnLogin
-    Element Text Should Be    xpath=//span[@id='spanMessage']    ${expected_error}
+    Click Login
+    #Element Text Should Be    xpath=//span[@id='spanMessage']    ${expected_error}
+    Validate Error Message    ${expected_error}
