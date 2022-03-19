@@ -2,6 +2,7 @@
 Documentation   This suite handles test case related to emergency contact
 
 Resource    ../Resource/Base/CommonFunctionality.resource
+Resource    ../Resource/Pages/LoginPage.resource
 
 Library     DataDriver      file=../test_data/orange_data.xlsx      sheet_name=AddEmergencyContact
 
@@ -16,8 +17,8 @@ Verify Add Emergency Contact Test
 *** Keywords ***
 Verify Add Emergency Contact Template
     [Arguments]     ${username}     ${password}     ${name}     ${relationship}      ${home_telephone}
-    Input Text    id=txtUsername    ${username}
-    Input Password    id=txtPassword    ${password}
+    Enter username    ${username}   
+    Enter Password    ${password}  
     Click Element    id=btnLogin
     Page Should Contain    My Info
     Click Element    link=My Info

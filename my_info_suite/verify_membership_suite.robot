@@ -2,6 +2,7 @@
 Documentation   This suite handles test case related to Memberships
 
 Resource    ../Resource/Base/CommonFunctionality.resource
+Resource    ../Resource/Pages/LoginPage.resource
 
 Library     DataDriver      file=../test_data/orange_data.xlsx      sheet_name=AddMembership
 
@@ -16,8 +17,8 @@ Verify Add Membership Test
 *** Keywords ***
 Verify Add Membership Template
     [Arguments]     ${username}     ${password}     ${membership}   ${subscription_paid_by}     ${subscription_amount}      ${currency}
-    Input Text    id=txtUsername    ${username}
-    Input Password    id=txtPassword    ${password}
+    Enter username    ${username}   
+    Enter Password    ${password}  
     Click Element    id=btnLogin
     Page Should Contain    My Info
     Click Element    link=My Info

@@ -2,6 +2,7 @@
 Documentation   This suite willl handles all the test cases related to valid credentials test. Test case for orangehrm - TC_OH_2
 
 Resource        ../Resource/Base/CommonFunctionality.resource
+Resource        ../Resource/Pages/LoginPage.resource
 
 Test Setup      Launch Browser
 Test Teardown       Close Browser
@@ -19,7 +20,7 @@ TC4     Anup        ${EMPTY}    Password cannot be empty
 *** Keywords ***
 Verify Invalid Credential Template
     [Arguments]     ${username}     ${password}     ${expected_error}
-    Input Text    id=txtUsername    ${username}
-    Input Password    id=txtPassword    ${password}
+    Enter username    ${username}
+    Enter Password    ${password}
     Click Element    id=btnLogin
     Element Text Should Be    xpath=//span[@id='spanMessage']    ${expected_error}
