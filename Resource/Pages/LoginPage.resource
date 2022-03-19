@@ -1,6 +1,7 @@
 *** Settings ***
 Documentation   This suite will handles all operation in the logi page
-Library    SeleniumLibrary
+
+Resource    ../Base/CommonFunctionality.resource
 
 *** Variables ***
 ${USERNAME_LOCATOR}     id=txtUsername
